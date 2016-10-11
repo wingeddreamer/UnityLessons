@@ -2,14 +2,16 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Step2_1 : MonoBehaviour {
+public class Step3_1 : MonoBehaviour {
 
     public Text inputNumber, hintText;
     public Button submitNum;
+    int targetNum;
 
 	// Use this for initialization
 	void Start () {
-	
+        targetNum = Random.Range(1, 100);
+        Debug.Log(targetNum);
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,9 @@ public class Step2_1 : MonoBehaviour {
         inNum = int.Parse(inputNumber.text);
         if (inNum < 1) hintText.text = "你输入的数字小于1啦\n请输入1到100之间的整数";
         else if (inNum > 100) hintText.text = "你输入的数字大于100啦\n请输入1到100之间的整数";
-        else hintText.text = "你的输入在合理的范围内\n等我想想下面怎么做";
+        //判断猜测结果是否正确
+        else if (inNum > targetNum) hintText.text = "你猜的数字太大啦，再试试吧";
+        else if (inNum < targetNum) hintText.text = "你猜的数字太小啦，再试试吧";
+        else if (inNum == targetNum) hintText.text = "真聪明，你猜对了！";
     }
 }
