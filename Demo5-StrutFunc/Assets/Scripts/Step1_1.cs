@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Step2_1 : MonoBehaviour {
+public class Step1_1 : MonoBehaviour {
 
     enum genders
     {
