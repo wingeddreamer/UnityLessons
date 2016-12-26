@@ -4,9 +4,12 @@ using System.Collections;
 public class Step2_3_1: MonoBehaviour {
 
     public GameObject balloon;
+    public Texture[] balloonPatternsSetup;
+    static public Texture[] balloonPatterns;
 
     // Use this for initialization
     void Start () {
+        balloonPatterns = balloonPatternsSetup;
         StartCoroutine("BalloonGen");
     }
 
@@ -28,6 +31,6 @@ public class Step2_3_1: MonoBehaviour {
 
     void createBalloon ()
     {
-        Instantiate(balloon, new Vector3(Random.Range(-8, 8), -5f, Random.Range(0,5)), Quaternion.identity);
+        Instantiate(balloon, new Vector3(Random.Range(-8, 8), -6f, Random.Range(0,5)), Quaternion.identity);
     }
 }

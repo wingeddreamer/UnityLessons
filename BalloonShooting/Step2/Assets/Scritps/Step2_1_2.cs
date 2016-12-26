@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Step2_1_2 : MonoBehaviour {
 
-    const float MaxSpeed= 0.25f, MinSpeed = 0.025f;
+    const float MaxSpeed = 0.1f, MinSpeed = 0.05f;
 
     float speed = 0f;
     float Speed
